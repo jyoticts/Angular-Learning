@@ -1,0 +1,102 @@
+<div><button (click)='back()'>Back</button></div>
+<div class="top-section">
+  <div class="header-label">Deceased Details</div>
+</div>
+<div class="section-body row m-0 view-form deceased-details-section" *ngIf="!deceasedDetails">
+  <div class="input-wrapper col-md-6 ">
+    <label>No Data to show</label>
+    <br />
+  </div>
+</div>
+<div class="section-body row m-0 view-form deceased-details-section" *ngIf="deceasedDetails">
+  <div class="input-wrapper col-md-6 ">
+    <label>Name of deceased</label>
+    <br />
+    <span>{{deceasedDetails.deceasedName}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>NRIC of deceased</label>
+    <br />
+    <span>{{deceasedDetails.deceasedNRIC}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Date of death</label>
+    <br />
+    <span>{{deceasedDetails.dateOfDeath | date}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Cause of death</label>
+    <br />
+    <span>{{deceasedDetails.causeOfDeath}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Did the deceased leave a will?</label>
+    <br />
+    <span>{{deceasedDetails.willLeft}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Deceased’s marital status at time of death</label>
+    <br />
+    <span>{{deceasedDetails.deceasedMaritalStatus}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Name of informant</label>
+    <br />
+    <span>{{deceasedDetails.informantName}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Relationship of informant to the deceased</label>
+    <br />
+    <span>{{deceasedDetails.relationshipWithInformant}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Has the deceased been bankrupt or insolvent?</label>
+    <br />
+    <span>{{deceasedDetails.deceasedBankStatus}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Has the claimant been bankrupt or insolvent?</label>
+    <br />
+    <span>{{deceasedDetails.informantBankStatus}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Is Informant solely a tax resident of Singapore?</label>
+    <br />
+    <span>{{deceasedDetails.informantTaxStatus}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>A certified true copy of the death cert</label>
+    <br />
+    <span>{{deceasedDetails.deathCertificate}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>A copy of informant’s NRIC</label>
+    <br />
+    <span>{{deceasedDetails.informantNRIC}}</span>
+
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Proof of relationship between informant and deceased</label>
+    <br />
+    <span>{{deceasedDetails.relationshipProof}}</span>
+
+  </div>
+  <div class="btn-container col-md-12 ">
+    <button class="btn-submit" (click)="acknowledge()">Acknowledge</button>
+  </div>
+
+</div>
+<app-popup [message]="popupMessage" (confirmation)="confirmAcknowledge()" [optionsExcluded]="popupOptionsExcluded"
+  (cancelation)="cancelAcknowledge()" *ngIf="showPopup"></app-popup>

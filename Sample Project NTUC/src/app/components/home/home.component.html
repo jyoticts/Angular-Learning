@@ -1,0 +1,33 @@
+<div class="top-section">
+  <div class="header-label">Deceased List</div>
+  <div class="search-box">
+    <input>
+    <button>Search</button>
+  </div>
+</div>
+<div class="mat-elevation-z8">
+  <mat-table #table matSort [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="deceasedNRICHash">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> NRIC Hash of Deceased</mat-header-cell>
+      <mat-cell *matCellDef="let element"  >
+       <a class="link" (click)="viewDetails(element.deceasedNRICHash)"> {{element.deceasedNRICHash}}</a>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="dateOfDeath">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Date of Death </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{element.dateOfDeath | date}}
+        </mat-cell>
+      </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+
+</div>
+<mat-paginator  class="mat-elevation-z8" #paginator [pageIndex]="pageIndex" [pageSize]="pageSize " [pageSizeOptions]="[5, 10, 20]"
+[showFirstLastButtons]="true" [length]="len" (page)="pageEvent = $event; pageChangeEvent($event)">
+</mat-paginator>
+<!-- <app-view></app-view> -->

@@ -1,0 +1,15 @@
+<div class="section-container">
+  <ul class="nav">
+    <li class="nav-item"></li>
+    <li class="nav-item">
+      <a class="nav-link  {{currentTab=='home' ? 'active' : ''}}" data-toggle="tab" href="#home" role="tab" (click)="selectTab('home')">Home</a>
+    </li>
+    <!-- <li class="nav-item">
+        <a class="nav-link {{currentTab=='create' ? 'active' : ''}}" data-toggle="tab" href="#image" role="tab" (click)="selectTab('create')">Create</a>
+      </li> -->
+    
+    <li class="nav-item">
+        <a class="nav-link {{currentTab=='logout' ? 'active' : ''}}" data-toggle="tab" href="#image" role="tab" (click)="selectTab('logout')">Logout</a>
+      </li>
+  </ul>
+</div>

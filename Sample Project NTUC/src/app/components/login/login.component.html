@@ -1,0 +1,24 @@
+<div class="login-background">
+  <div class="section-container login-container">
+    <div class="section-body row m-0 view-form">
+      <div class="login-logo"></div>
+      <div class="input-wrapper col-md-12 ">
+        <label>Username</label>
+        <br />
+        <input type="email" class="form-control" placeholder="Enter username" name="username" #username="ngModel"
+                [(ngModel)]="loginForm.username" required>
+      </div>
+      <div class="input-wrapper col-md-12 ">
+        <label>Password</label>
+        <br />
+        <input type="password" class="form-control" placeholder="Enter password" name="password" #password="ngModel"
+                [(ngModel)]="loginForm.password" required>
+        <label class="error-label">{{loginError}}</label>
+      </div>
+
+      <div class="btn-container col-md-12 ">
+        <button class="btn-submit" (click)="login()">Login</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="section-body row m-0 form">
+  <div class="input-wrapper col-md-6 ">
+    <label>Name of deceased</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>NRIC of deceased</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Date of death</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Cause of death</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Did the deceased leave a will?</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Deceased’s marital status at time of death</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Name of informant</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Relationship of informant to the deceased</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Has the deceased or the claimant been bankrupt or insolvent?</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Is Informant solely a tax resident of Singapore?</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>A certified true copy of the  death cert</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>A copy of informant’s NRIC</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+  <div class="input-wrapper col-md-6 ">
+    <label>Proof of relationship between informant and deceased</label>
+    <br />
+    <input>
+    <label class="error-label"></label>
+  </div>
+
+
+
+
+  <div class="btn-container col-md-12 ">
+      <button class="btn-submit" (click)="createPromo()" *ngIf="!isEditMode">Submit</button>
+              <button class="btn-submit" (click)="updatePromo()" *ngIf="isEditMode">Save</button>
+              <button class="btn-cancel" (click)="cancelPromo();">Cancel</button>
+    </div>
+
+</div>
