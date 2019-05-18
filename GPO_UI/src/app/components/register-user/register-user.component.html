@@ -1,0 +1,113 @@
+<form  
+[formGroup]="userRegisterForm"
+novalidate
+autocomplete="off"
+(ngSubmit)="userRegisterFormSubmit(userRegisterForm.getRawValue())">
+
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Add credentials
+      </mat-panel-title>
+      <mat-panel-description>
+       Please Add your credentials
+        <mat-icon>account_circle</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+  
+    <mat-card-content>
+
+       <mat-form-field class="full-width">
+                <mat-label>User Name</mat-label>
+                <input  matInput  placeholder="First name"  name="username" formControlName="username"  required>
+             </mat-form-field>    
+             <br/>        
+           
+             <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input  matInput  placeholder="Password" name="password"  formControlName="password" required>
+             </mat-form-field>
+             <br/>
+             <mat-form-field class="full-width">
+                <mat-label>Confirm Password</mat-label>
+                <input  matInput  placeholder="Confirm Password"  name="confirmPassword"  formControlName="confirmPassword" required>
+             </mat-form-field>
+  
+    </mat-card-content>
+
+   
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+  Add business information
+      </mat-panel-title>
+      <mat-panel-description>
+      Plese fill the business details for registration.
+      <mat-icon>description</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-card-content>
+       
+    
+        <mat-form-field class="full-width">
+          <mat-label>Pharmacy ID</mat-label>
+          <input  matInput  placeholder="Pharmacy ID"  name="pharmacyID" formControlName="pharmacyName" >
+       </mat-form-field>  
+       <mat-form-field class="full-width">
+       <mat-label>Pharmacy Name</mat-label>
+       <input  matInput  placeholder="Pharmacy Name"  name="pharmacyName" formControlName="pharmacyName" required>
+      </mat-form-field>  
+      <br/>
+      <mat-form-field class="full-width">
+      <mat-label>Pharmacy Registration ID</mat-label>
+      <input  matInput  placeholder="Pharmacy Registration ID"  name="pharmacyRegID" formControlName="pharmacyRegID"  required>
+      </mat-form-field>  
+      <mat-form-field class="full-width">
+      <mat-label>Email address</mat-label>
+      <input  matInput  placeholder="Email address"  name="email"  formControlName="email" required>
+      </mat-form-field>  
+      <br/>
+      <mat-form-field class="full-width">
+      <mat-label>Country</mat-label>
+      <input  matInput  placeholder="Country"  name="country"  formControlName="country" >
+      </mat-form-field>  
+      <mat-form-field class="full-width">
+      <mat-label>Address</mat-label>
+      <input  matInput  placeholder="Address"  name="address" formControlName="address"  >
+      </mat-form-field>  
+      <br/>
+      <mat-form-field class="full-width">
+      <mat-label>Pin</mat-label>
+      <input  matInput  placeholder="Pin"  name="pin"  formControlName="pin" >
+      </mat-form-field>  
+      <mat-form-field class="full-width">
+      <mat-label>Contact Number</mat-label>
+      <input  matInput  placeholder="Contact Number"  name="contactNumber" formControlName="contactNumber"  >
+      </mat-form-field>  
+      <br/>
+      <mat-form-field class="full-width">
+      <mat-label>Company Website URL</mat-label>
+      <input  matInput  placeholder="Company Website URL"  name="url" formControlName="url"  >
+      </mat-form-field>  
+      <!-- •	Contract ID (hyperlink – which will open a popup showing the Contract details) -->
+     
+
+    </mat-card-content>
+   
+    
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+<button mat-raised-button type="submit" color="primary" [disabled]="userRegisterForm.invalid"  >REGISTER</button>
+</form>
+
+
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

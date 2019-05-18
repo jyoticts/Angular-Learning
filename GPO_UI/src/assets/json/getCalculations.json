@@ -1,0 +1,9 @@
+{
+    "grandTotalInvoicedAmount": "-300.0",
+    "gpoProcessingFees": "100.0",
+    "totalRebateAmount": "500.0",
+    "gpoDiscountPercent": "1.0",
+    "gskDiscountPercent": "5.0",
+    "gskDiscountAmount": "500.0",
+    "totalAmountGskGet": "-400.0"
+}

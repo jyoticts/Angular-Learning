@@ -1,0 +1,10 @@
+<div class="popup-background">
+  <div class="popup-container">
+    <div>
+      <div class="popup-message">{{message}}</div>
+      <div class="btn-container col-md-12 "></div>
+      <button class="btn-submit " type="submit" (click)="confirm()"  *ngIf="!isExcluded('confirmation')">OK</button>
+      <button class="btn-cancel " type="submit" (click)="cancel()"  *ngIf="!isExcluded('cancelation')">Cancel</button>
+    </div>
+  </div>
+</div>
